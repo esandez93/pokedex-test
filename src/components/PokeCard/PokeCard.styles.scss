@@ -1,0 +1,37 @@
+.PokeCard {
+  display: flex;
+  max-width: 220px;
+  flex-direction: column;
+  margin: 8px 8px 32px 8px;
+  border-radius: 8px;
+
+  .upper {
+    background-color: #F2F2F2;
+    border-radius: 8px;
+  }
+
+  .lower {
+    padding: 8px;
+    font-family: "Flexo-Bold", arial, sans-serif;
+
+    .number {
+      font-family: "Flexo-Bold", arial, sans-serif;
+      color: #919191;
+    }
+
+    .name {
+      margin: 8px 0px;
+      text-transform: capitalize;
+    }
+
+    .types {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 3px lightgrey;
+
+  }
+}

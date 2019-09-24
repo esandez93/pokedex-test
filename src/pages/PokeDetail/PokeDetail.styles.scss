@@ -1,0 +1,223 @@
+.PokeDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    .prev,
+    .next {
+      background-color: lightgrey;
+      width: 150px;
+      margin-left: 12px;
+      margin-right: 12px;
+      padding: 8px 24px;
+      font-size: 18px;
+      border-radius: 16px;
+      outline: none;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #30A7D7;
+      }
+
+      .prev-poke,
+      .next-poke {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+
+        > span {
+          color: grey;
+        }
+      }
+
+      .next-poke {
+        align-items: flex-end;
+      }
+      .prev-poke {
+        align-items: flex-start;
+      }
+    }
+
+    .logo {
+      max-height: 120px;
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding: 0 16px;
+
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .image {
+        background-color: #F2F2F2;
+        border-radius: 5px;
+        margin-bottom: 16px;
+        margin-right: 16px;
+        min-width: 475px;
+      }
+
+      .stats {
+        border-radius: 16px;
+        background-color: #A4A4A4;
+        padding: 18px 24px 18px 24px;
+        margin-right: 16px;
+
+        .stats-grid {
+          display: flex;
+          margin-top: 18px;
+
+          .stats-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-right: 12px;
+            font-size: 10px;
+
+            .stats-column-name {
+              margin-top: 4px;
+            }
+
+            .stats-column-fill,
+            .stats-column-empty {
+              height: 8px;
+              width: 100%;
+              margin-top: 4px;
+            }
+            .stats-column-fill {
+              background-color: #30A7D7;
+            }
+            .stats-column-empty {
+              background-color: white;
+            }
+          }
+        }
+      }
+
+      .description {
+        padding: 4px;
+        line-height: 24px;
+      }
+
+      .info {
+        position: relative;
+        display: flex;
+        padding: 16px;
+        margin-top: 24px;
+        border-radius: 8px;
+        background-color: #30A7D7;
+
+        .ability-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          padding: 24px 48px 24px 24px;
+          color: white;
+          border-radius: 8px;
+          background-color: rgba(0, 0, 0, 0.75);
+
+          .close-overlay {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+
+            &:hover {
+              font-weight: bold;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .column {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .attribute {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 16px;
+        }
+
+        .title {
+          color: white;
+          margin-bottom: 8px;
+        }
+
+        .ability {
+          margin-bottom: 8px;
+
+          &:hover {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+
+      .attributes {
+        margin-top: 24px;
+
+        .types,
+        .weaknesses {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          display: flex;
+          flex-wrap: wrap;
+
+          .PokeType {
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .evolutions {
+    margin-top: 18px;
+    padding: 24px;
+    background-color: lightgrey;
+    border-radius: 6px;
+    width: 100%;
+
+    .title {
+      margin-left: 8px;
+      margin-bottom: 8px;
+    }
+
+    .evolutions-pokemons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .current {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .arrow-right {
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-top: 7px solid;
+        border-right: 7px solid;
+        margin: 15px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
